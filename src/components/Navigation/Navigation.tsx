@@ -21,6 +21,7 @@ export const Navigation: FC = () => {
           contentStyle: {
             backgroundColor: colors.white,
           },
+          headerBackTitleVisible: false,
         }}
         initialRouteName={routes.welcome}>
         <Stack.Screen
@@ -28,10 +29,34 @@ export const Navigation: FC = () => {
           component={Welcome}
           options={{ header: () => false }}
         />
-        <Stack.Screen name={routes.login} component={Login} />
-        <Stack.Screen name={routes.register} component={Register} />
-        <Stack.Screen name={routes.verifyCode} component={VerificationCode} />
-        <Stack.Screen name={routes.home} component={Home} />
+        <Stack.Screen
+          name={routes.login}
+          component={Login}
+          options={{
+            title: 'Login',
+          }}
+        />
+        <Stack.Screen
+          name={routes.register}
+          component={Register}
+          options={{
+            title: 'Register',
+          }}
+        />
+        <Stack.Screen
+          name={routes.verifyCode}
+          component={VerificationCode}
+          options={{
+            title: 'Verification Code',
+          }}
+        />
+        <Stack.Screen
+          name={routes.home}
+          component={Home}
+          options={{
+            title: 'Home',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
