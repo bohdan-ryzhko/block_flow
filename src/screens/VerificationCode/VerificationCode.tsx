@@ -4,7 +4,6 @@ import {
   AuthLayout,
   BlockFlowButton,
   HelperText,
-  Loader,
   ReloadPage,
   VerifyCodeField,
 } from '../../components';

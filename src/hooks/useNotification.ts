@@ -1,4 +1,7 @@
-import notifee, { Notification } from '@notifee/react-native';
+import notifee, {
+  AndroidImportance,
+  Notification,
+} from '@notifee/react-native';
 
 export const useNotification = () => {
   return async (
@@ -12,12 +15,13 @@ export const useNotification = () => {
     const channelId = await notifee.createChannel({
       id: 'default',
       name: 'Default Channel',
+      importance: AndroidImportance.HIGH,
     });
 
     await notifee.displayNotification({
       android: {
         channelId,
-        smallIcon: 'name-of-a-small-icon',
+        importance: AndroidImportance.HIGH,
         pressAction: {
           id: 'default',
         },
