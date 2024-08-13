@@ -15,5 +15,9 @@ yarn android
 ### Run ios
 
 ```
+cd ios/ && pod install && cd ../
+```
+
+```
 yarn ios
 ```
